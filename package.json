@@ -1,8 +1,0 @@
-{
-  "name": "ronworks-portfolio-inspected-build",
-  "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "start": "node server.js"
-  }
-}
