@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: ronworks
+    runtime: node
+    plan: free
+    buildCommand: npm ci --omit=dev --registry=https://registry.npmjs.org/
+    startCommand: npm start
+    healthCheckPath: /health
+    autoDeployTrigger: commit
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: AUTH_USERNAME
+        sync: false
+      - key: AUTH_PASSWORD
+        sync: false
